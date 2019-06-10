@@ -8,11 +8,11 @@ Import-Module WebAdministration
 
 # Create the FTP site
 
-New-Item -Path "D:\" -Name "FTProot" -ItemType "directory"
+New-Item -Path "C:\" -Name "FTProot" -ItemType "directory"
 
 $FTPSiteName = 'Dtek-Training-FTP-Site'
 
-$FTPRootDir = 'D:\FTPRoot'
+$FTPRootDir = 'C:\FTPRoot'
 
 $FTPPort = 21
 
