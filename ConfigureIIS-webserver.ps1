@@ -6,7 +6,7 @@ Clear-Host
 $certificateDnsName = 'my.localcert.ssl' # a name you want to give to your certificate (can be anything you want for localhost)
 
 $siteName = "Default Web Site" # the website to apply the bindings/cert to (top level, not an application underneath!).
-$fqdn = "DTEKTRAINING"                     #fully qualified domain name (empty for 'All unassigned', or e.g 'contoso.com')
+$fqdn = "DTEKTRAINING.com"                     #fully qualified domain name (empty for 'All unassigned', or e.g 'contoso.com')
 
 
 # ----------------------------------------------------------------------------------------
