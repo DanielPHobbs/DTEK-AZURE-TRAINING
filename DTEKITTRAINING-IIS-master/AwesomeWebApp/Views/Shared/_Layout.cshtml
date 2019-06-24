@@ -1,0 +1,72 @@
+﻿@{ 
+    var appSettings = System.Configuration.ConfigurationManager.AppSettings;
+    ViewBag.IsStaging = appSettings["STAGE"] == "true";
+    ViewBag.Environment = Environment.GetEnvironmentVariable("REGION_NAME") ?? "localhost";
+    ViewBag.MachineName = Environment.MachineName;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - DTEKITINNOVATIONS Web App</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @{
+     if (ViewBag.IsStaging) 
+     {
+        @:<div class="navbar navbar navbar-fixed-top">
+     }
+     else
+     {
+        @:<div class="navbar navbar-inverse navbar-fixed-top">
+
+     }
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("DTEKITINNOVATIONS Web App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("DTEK Training Workshops", "Index", "DtekWorkshops")</li> 
+                    </ul>
+                </div>
+            </div>
+            <br />
+        @:</div>
+    }
+    
+             
+    @{
+        if (ViewBag.IsStaging)
+        {
+            <div style="color:red; font-size:x-large"><br />Stage Stage Stage Stage Stage Stage Stage Stage Stage Stage Stage Stage Stage Stage</div>
+        }
+    }
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <span>&copy; @DateTime.Now.Year - DTEKITINNOVATIONS Web App</span>
+            <span style="padding-left: 15px;">Served from: <strong>@ViewBag.Environment</strong></span>
+            <span style="padding-left: 15px;">Machine Name: <strong>@ViewBag.MachineName</strong></span>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
