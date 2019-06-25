@@ -137,6 +137,7 @@
     <Content Include="Content\images\EINSTIEN.png" />
     <Content Include="Content\images\essex-county-council-logo.png" />
     <Content Include="Content\images\icon-iis.png" />
+    <Content Include="Content\images\windowsserver2016datacenter.png" />
     <Content Include="Content\images\Workshop4-netsec.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -147,7 +148,8 @@
     <None Include="Properties\PublishProfiles\codez.pubxml" />
     <None Include="Properties\PublishProfiles\DTEK-MSDN-WebApp1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\DTEK-MSDN-WebApp2 - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\DTEKAZWEB2-IIS.pubxml" />
+    <None Include="Properties\PublishProfiles\DTEKTRAINING1-WEBSRV1-IIS.pubxml" />
+    <None Include="Properties\PublishProfiles\DTEKTRAINING1-WEBSRV2-IIS.pubxml" />
     <None Include="Properties\PublishProfiles\sitesite22.pubxml" />
     <Content Include="Properties\webjobs-list.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
