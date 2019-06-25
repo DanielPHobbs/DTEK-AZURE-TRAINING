@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+    if (System.Configuration.ConfigurationManager.AppSettings["STAGE"] == "true")
+    {
+        ViewBag.Title = "STAGE";
+    }
+
+}
+
+@{
+    if (System.Configuration.ConfigurationManager.AppSettings["STAGE"] == "true")
+    {
+        <div class="jumbotron">
+            <h1>DTEKITINNOVATIONS TRAINING STAGE </h1>
+            <p class="lead">Example ASP.NET Web Content hosted on an Azure Web APP.</p>
+        </div>
+    }
+    else
+    {
+        <div class="jumbotron">
+            <h1>DTEKITINNOVATIONS TRAINING </h1>
+            <p class="lead">Example ASP.NET Web Content hosted on an Azure Web APP.</p>
+        </div>
+    }
+}
+<table class="table">
+    <tr>
+        <td>
+
+            <img src="~/Content/images/DTEKITINNOVATIONS GRAPHIC.png" alt="DTEKITINNOVATION ROCKS !!!!!!" height="278" width="495">
+            <img src="~/Content/images/essex-county-council-logo.png" alt="ESSEX COUNTY COUNCIL" height="278" width="495">
+
+
+        </td>
+
+    </tr>
+</table>
+
+<table class="table">
+    <tr>
+        <td>
+
+            <img src="~/Content/images/icon-iis.png" alt="Internet Information Services 10" height="278" width="495">
+
+
+        </td>
+
+    </tr>
+</table>
+
+
+@section scripts {
+    <script>
+    $(function() {
+        $("#logsButton").click(function() {
+            $.get("@Url.Action("ProduceLogs", "Home")");
+        });
+    });
+    </script>
+}
