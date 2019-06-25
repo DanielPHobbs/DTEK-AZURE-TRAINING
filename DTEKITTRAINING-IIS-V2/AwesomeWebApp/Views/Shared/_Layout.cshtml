@@ -3,6 +3,7 @@
     ViewBag.IsStaging = appSettings["STAGE"] == "true";
     ViewBag.Environment = Environment.GetEnvironmentVariable("REGION_NAME") ?? "localhost";
     ViewBag.MachineName = Environment.MachineName;
+
 }
 
 
