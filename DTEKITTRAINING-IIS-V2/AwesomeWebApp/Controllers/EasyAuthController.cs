@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace AwesomeWebApp.Controllers
 {
-    public class EasyAuthController : Controller
+    public class DtekWorkshopsController : Controller
     {
         // GET: EasyAuth
         public ActionResult Index()
