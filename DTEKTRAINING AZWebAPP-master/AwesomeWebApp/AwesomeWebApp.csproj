@@ -148,6 +148,7 @@
     <None Include="Properties\PublishProfiles\DTEK-MSDN-WebApp1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\DTEK-MSDN-WebApp2 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\DTEKTEST-WE-NETSEC-WebApp1 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\DTEKTEST-WE-NETSEC-WebApp2 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\sitesite22.pubxml" />
     <Content Include="Properties\webjobs-list.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
