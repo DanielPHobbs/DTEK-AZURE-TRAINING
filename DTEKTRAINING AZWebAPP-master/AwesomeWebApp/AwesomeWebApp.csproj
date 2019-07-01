@@ -136,6 +136,7 @@
     <Content Include="Content\images\DTEKITINNOVATIONS GRAPHIC.png" />
     <Content Include="Content\images\EINSTIEN.png" />
     <Content Include="Content\images\essex-county-council-logo.png" />
+    <Content Include="Content\images\web-app.png" />
     <Content Include="Content\images\Workshop4-netsec.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -146,6 +147,7 @@
     <None Include="Properties\PublishProfiles\codez.pubxml" />
     <None Include="Properties\PublishProfiles\DTEK-MSDN-WebApp1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\DTEK-MSDN-WebApp2 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\DTEKTEST-WE-NETSEC-WebApp1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\sitesite22.pubxml" />
     <Content Include="Properties\webjobs-list.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
