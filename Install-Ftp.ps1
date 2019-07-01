@@ -7,3 +7,6 @@ $FTPSiteName = 'Default FTP Site'
 $FTPRootDir = 'C:\FTPRoot'
 $FTPPort = 21
 New-WebFtpSite -Name $FTPSiteName -Port $FTPPort -PhysicalPath $FTPRootDir
+
+& netsh advfirewall set allprofiles state off
+Restart-Service -Name mpssvc 
