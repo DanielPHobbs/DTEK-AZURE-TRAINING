@@ -103,7 +103,7 @@ New-AzVM -ResourceGroupName $rgName -Location $Location -VM $JumpBoxConfig
 Write-Host " Creating Server VM"
 $ServersSubnetId = $vnet.Subnets[2].Id
 $ServerVmNic = New-AzNetworkInterface -Name ServerVmNic -ResourceGroupName $rgName -Location $Location -SubnetId $ServersSubnetId
-$ServerVmConfig = New-AzVMConfig -VMName ServerVm -VMSize Standard_B2ms | Set-AzVMOperatingSystem -Windows -ComputerName ServerVm -Credential $cred1 | Set-AzVMSourceImage -PublisherName "MicrosoftWindowsServer" -Offer "WindowsServer" -Skus "2016-Datacenter" -Version latest | Add-AzVMNetworkInterface -Id $ServerVmNic.Id
+$ServerVmConfig = New-AzVMConfig -VMName ServerVm -VMSize Standard_B1ms | Set-AzVMOperatingSystem -Windows -ComputerName ServerVm -Credential $cred1 | Set-AzVMSourceImage -PublisherName "MicrosoftWindowsServer" -Offer "WindowsServer" -Skus "2016-Datacenter" -Version latest | Add-AzVMNetworkInterface -Id $ServerVmNic.Id
 New-AzVM -ResourceGroupName $rgName -Location $Location -VM $ServerVmConfig
 
 #Create AZFW
